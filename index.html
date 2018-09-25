@@ -26,26 +26,16 @@
                               <li> <a id="scheduleLink" href="#schedule">schedule</a> </li>
                               <li> <a id="learnMoreLink" href="#learnMore">learn more</a> </li>
                               <li> <a id="contactLink" href="#contact">contact</a> </li>
-                              <!--
-                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE <span class="caret"></span> </a>
-                            <ul class="dropdown-menu">
-                                <li> <a href="#">Merchandise</a> </li>
-                                <li> <a href="#">Extras</a> </li>
-                                <li> <a href="#">Media</a> </li>
-                            </ul>
-                        </li>
--->
-                              <li> <a href="#"> <span class="glyphicon glyphicon-search"></span> </a> </li>
                          </ul>
                     </div>
                </div>
           </nav>
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div id="topCarousel" class="carousel slide" data-ride="carousel">
                <!-- Indicators -->
                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"> </li>
-                    <li data-target="#myCarousel" data-slide-to="1"> </li>
-                    <li data-target="#myCarousel" data-slide-to="2"> </li>
+                    <li data-target="#topCarousel" data-slide-to="0" class="active"> </li>
+                    <li data-target="#topCarousel" data-slide-to="1"> </li>
+                    <li data-target="#topCarousel" data-slide-to="2"> </li>
                </ol>
                <!-- Wrapper for slides -->
                <div class="carousel-inner" role="listbox">
@@ -69,7 +59,7 @@
                     </div>
                </div>
                <!-- Left and right controls --> 
-               <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+               <a class="left carousel-control" href="#topCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#topCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
           </div>
           <!-- Container (The WEB CHALLENGE Section) -->
           <div id="challenge" class="container text-center">
@@ -264,6 +254,11 @@
                               <p>Jump Start Incubator is a temporary home for start-up businesses in the Greater Reading Area. It provides them with the intellectual and leadership capital necessary for their success during their critical development period, and helps businesses to become self-sufficient and reach their potential. Jump Start Incubator helps to launch and grow exciting, innovative firms that will become the cornerstones of a revitalized city. The incubator serves entrepreneurs as they navigate the pre-incubation, incubation and graduation stages of business startup. On-site tenant clients are headquartered in business suites with access to a comprehensive communications/IT package, conference facilities, and a receptionist.</p>
                          </div>
                     </div>
+                    <div class="row">
+                         <div class="col-lg-12 text-center">
+                              <img src="assets/images/logos/jump-start-incubator-logo.png" class="img-responsive bg-info img-rounded" style="padding: 10px; margin: auto auto; max-width: 250px;" alt="">
+                         </div>
+                    </div>
                </div>
           </div>
           <div id="contact">
@@ -277,41 +272,6 @@
                               <p> <span class="glyphicon glyphicon-phone"></span> Phone: 610-607-6219 </p>
                               <p> <span class="glyphicon glyphicon-envelope"></span> Email: jcorbett@racc.edu </p>
                          </div>
-                         <!--
-                         <div class="col-md-8">
-                              <form id="conForm" class="form-horizontal" role="form" method="post">
-                                   <div class="form-group">
-                                        <label for="name" class="control-label">Name</label>
-                                        <div>
-                                             <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
-                                             <p id="fbName" class="text-danger" required></p>
-                                        </div>
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="email" class="control-label">Email</label>
-                                        <div>
-                                             <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="" required>
-                                             <p id="fbEmail" class="text-danger"></p>
-                                        </div>
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="message" class="control-label">Message</label>
-                                        <div>
-                                             <textarea id="message" class="form-control" rows="4" name="message" required></textarea>
-                                             <p id="fbMessage" class="text-danger"></p>
-                                        </div>
-                                   </div>
-                                   <div class="form-group">
-                                        <div>
-                                             <input id="btnSubmitContact" name="submit" type="submit" value="Send" class="btn btn-primary" style="float: left;">
-                                             <div id="ldrDivEmail" style="float: left; display:inline; display: none; padding-left: 10px;">
-                                                  <i class="far fa-circle-notch fa-spin"></i> <span id="ldrMsgEmail" style="font: bold; color: #0B1B7C"></span>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </form>
-                         </div>
-                         -->
                     </div>
                </div>
           </div>
@@ -337,75 +297,9 @@
           </div>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-          <script>
-            $(document).ready(function(){
-              // Initialize Tooltip
-              $('[data-toggle="tooltip"]').tooltip(); 
-
-              // Add smooth scrolling to all links in navbar + footer link
-              $(".navbar a, footer a[href='#home']").on('click', function(event) {
-
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                  scrollTop: $(hash).offset().top
-                }, 900, function(){
-
-                  // Add hash (#) to URL when done scrolling (default click behavior)
-                  window.location.hash = hash;
-                });
-              });
-            })
-        </script> 
           <script src="assets/js/responsive-tabs.js"></script> 
           <script src="assets/js/app.js"></script> 
-          <script>
-     
-$(document).ready(function(){
-    $('.gmap').click(function(e) {
-        e.preventDefault();
-         console.log(e.currentTarget.innerHTML);
-         console.log(e);
-         if(e.currentTarget.innerHTML == '10 South Second Street, Reading, PA 19602'){
-              $('#lgModal .modal-body').html('<iframe src="'+e.currentTarget.href+'" width="100%" height="500px;"></iframe>');
-         }
-         $('#lgModal .modal-header').html(e.currentTarget.innerHTML);
-         $('#lgModal').modal('show');
-         var divId = 'summary' +$(this).attr('id');
-
-        document.getElementById(divId).className = ''; /* or $('#'+divid).removeAttr('class'); */
-
-    });
-    $('#teams a').click(function(e) {
-        e.preventDefault();
-         console.log($(this).siblings(".card-title")[0].innerHTML);
-         $('#teamModal .modal-header').html('<h1>'+$(this).siblings(".card-title")[0].innerHTML+'</h1><h5>'+$(this).siblings(".card-text")[0].innerHTML+'</h5>');
-         $('#teamModal').modal('show');
-    });
- });
-     
-     </script> 
-          
           <!-- Global site tag (gtag.js) - Google Analytics --> 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123539134-1"></script> 
-          <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-123539134-1');
-            
-            $(".navbar-nav li a").click( function() {
-                console.log("NAV CLICKED");
-                console.log(this.id);
-                ga('send', 'event', 'Page Clicks', 'Click to scroll', this.id);
-            }); 
-            
-        </script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123539134-1"></script>
      </body>
 </html>

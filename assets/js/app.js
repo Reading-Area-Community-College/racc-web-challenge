@@ -1,7 +1,3 @@
-// inside out project STEP-502
-
-//$("body").prepend('<div class=text-white style=position:fixed;top:0;bottom:0;width:100%;z-index:99999999;padding-top:12%;background-color:rgba(87,87,87,.95);" id="cover-page"><div id="cover-page-con" class="container text-center"style="opacity:100%;"><img alt="Web Competition 2018"class="img-fluid rounded-circle"src="https://www.racc.edu/sites/default/files/logo_1.png"><h1>Web Competition 2018</h1><p class=lead>...inspired innovative technology leader & follower.<p class=lead style=font-size:80%><i class="fa-1x fa-cog fa-spin fas"></i> we are preparing your experiance now...</div></div>');
-
 var parentPageID = 1841;
 var targetDomain = 'raccreallife.com';
 //var menuPath = 'https://'+targetDomain+'/wp-json/wp-api-menus/v2/menus/66';
@@ -10,8 +6,31 @@ var defaultHomePage = 1808;
 
 window.onload = getContent();
 
-//$(".carousel-inner .item").css('max-height', window.innerHeight);
-//$("#challenge, #guests, #schedule, #learnMore, #contact").css('min-height', window.innerHeight);
+$(document).ready(function () {
+     // Initialize Tooltip
+     $('[data-toggle="tooltip"]').tooltip();
+
+     // Add smooth scrolling to all links in navbar + footer link
+     $(".navbar a, footer a[href='#home']").on('click', function (event) {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+               scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+               // Add hash (#) to URL when done scrolling (default click behavior)
+               window.location.hash = hash;
+          });
+     });
+})
+
 
 function getContent() {
 
@@ -45,7 +64,6 @@ function getContent() {
                     let theVenue = '';
 
                     item.tags.forEach(function (item) {
-                         //console.log(item.name);
                          if (item.name == 'scrum') {
                               tabIcon = 'chalkboard-teacher';
                               timeSlots = '8:30 AM to 9:30 AM & 12:30 PM to 1:30 PM';
@@ -101,11 +119,6 @@ function getContent() {
                //console.log('bad');
           }
      });
-
-
-
-
-
 
      var hidWidth;
      var scrollBarWidths = 100;
@@ -264,4 +277,46 @@ $("#btnSubmitContact").on("click", function (event) {
 
      // stop the form from submitting the normal way and refreshing the page
      event.preventDefault();
+});
+
+
+
+
+$(document).ready(function () {
+     $('.gmap').click(function (e) {
+          e.preventDefault();
+          console.log(e.currentTarget.innerHTML);
+          console.log(e);
+          if (e.currentTarget.innerHTML == '10 South Second Street, Reading, PA 19602') {
+               $('#lgModal .modal-body').html('<iframe src="' + e.currentTarget.href + '" width="100%" height="500px;"></iframe>');
+          }
+          $('#lgModal .modal-header').html(e.currentTarget.innerHTML);
+          $('#lgModal').modal('show');
+          var divId = 'summary' + $(this).attr('id');
+
+          document.getElementById(divId).className = ''; /* or $('#'+divid).removeAttr('class'); */
+
+     });
+     $('#teams a').click(function (e) {
+          e.preventDefault();
+          console.log($(this).siblings(".card-title")[0].innerHTML);
+          $('#teamModal .modal-header').html('<h1>' + $(this).siblings(".card-title")[0].innerHTML + '</h1><h5>' + $(this).siblings(".card-text")[0].innerHTML + '</h5>');
+          $('#teamModal').modal('show');
+     });
+});
+
+
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+     dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'UA-123539134-1');
+
+$(".navbar-nav li a").click(function () {
+     console.log("NAV CLICKED");
+     console.log(this.id);
+     ga('send', 'event', 'Page Clicks', 'Click to scroll', this.id);
 });
