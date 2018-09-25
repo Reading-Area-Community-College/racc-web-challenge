@@ -45,21 +45,21 @@ function getContent() {
                     let theVenue = '';
 
                     item.tags.forEach(function (item) {
-                         console.log(item.name);
-                         if(item.name == 'scrum'){
+                         //console.log(item.name);
+                         if (item.name == 'scrum') {
                               tabIcon = 'chalkboard-teacher';
                               timeSlots = '8:30 AM to 9:30 AM & 12:30 PM to 1:30 PM';
                          }
                     });
-                    
-                    if(item.venue.venue === 'WebEx'){
+
+                    if (item.venue.venue === 'WebEx') {
                          theVenue = 'WebEx<br /> Link will be provided the day of the meeting.';
-                    }else{
-                         theVenue = item.venue.venue+'<br />'+item.venue.address+', '+item.venue.city+' '+item.venue.zip;
+                    } else {
+                         theVenue = item.venue.venue + '<br />' + item.venue.address + ', ' + item.venue.city + ' ' + item.venue.zip;
                     }
 
 
-                    topTabs = topTabs + '<li  class="' + isHomeTab + '""> <a href="#' + item.id + '"> <i class="fas fa-'+tabIcon+'"></i>  ' + item.start_date_details.month + '-' + item.start_date_details.day + '</a> </li>';
+                    topTabs = topTabs + '<li  class="' + isHomeTab + '""> <a href="#' + item.id + '"> <i class="fas fa-' + tabIcon + '"></i>  ' + item.start_date_details.month + '-' + item.start_date_details.day + '</a> </li>';
 
                     tabContent = tabContent + '<div class="tab-pane ' + isHomeTab + '" id="' + item.id + '">' + item.description + '<div class="well"><div class="row"><div class="col-md-6"><strong>Location:</strong> ' + theVenue + '</div><div class="col-md-6"><strong>Date & Time:</strong> ' + startDate.toLocaleDateString("en-US", options) + ' <br /> ' + timeSlots + '</div></div></div></div>';
 
@@ -93,84 +93,88 @@ function getContent() {
                $('#printLessonItemsBtn01, #printLessonItemsBtn02').click(function (e) {
                     printElement('#scheduleModal .modal-body');
                });
-               
+
                reAdjust();
 
           },
           error: function () {
-               console.log('bad');
+               //console.log('bad');
           }
      });
-     
-     
-     
-     
 
-             
-var hidWidth;
-var scrollBarWidths = 100;
 
-var widthOfList = function(){
-  var itemsWidth = 0;
-  $('.list li').each(function(){
-    var itemWidth = $(this).outerWidth();
-    itemsWidth+=itemWidth;
-  });
-  return itemsWidth;
-};
 
-var widthOfHidden = function(){
-  return (($('.wrapper').outerWidth())-widthOfList()-getLeftPosi())-scrollBarWidths;
-};
 
-var getLeftPosi = function(){
-  return $('.list').position().left;
-};
 
-var reAdjust = function(){
-  if (($('.wrapper').outerWidth()) < widthOfList()) {
-    $('.scroller-right').show();
-  }
-  else {
-    $('.scroller-right').hide();
-  }
-  
-  if (getLeftPosi()<0) {
-    $('.scroller-left').show();
-  }
-  else {
-    $('.item').animate({left:"-="+getLeftPosi()+"px"},'slow');
-  	$('.scroller-left').hide();
-  }
-}
 
-reAdjust();
+     var hidWidth;
+     var scrollBarWidths = 100;
 
-$(window).on('resize',function(e){  
-  	reAdjust();
-});
+     var widthOfList = function () {
+          var itemsWidth = 0;
+          $('.list li').each(function () {
+               var itemWidth = $(this).outerWidth();
+               itemsWidth += itemWidth;
+          });
+          return itemsWidth;
+     };
 
-$('.scroller-right').click(function() {
-  
-  $('.scroller-left').fadeIn('slow');
-  $('.scroller-right').fadeOut('slow');
-  
-  $('.list').animate({left:"+="+widthOfHidden()+"px"},'slow',function(){
+     var widthOfHidden = function () {
+          return (($('.wrapper').outerWidth()) - widthOfList() - getLeftPosi()) - scrollBarWidths;
+     };
 
-  });
-});
+     var getLeftPosi = function () {
+          return $('.list').position().left;
+     };
 
-$('.scroller-left').click(function() {
-  
-	$('.scroller-right').fadeIn('slow');
-	$('.scroller-left').fadeOut('slow');
-  
-  	$('.list').animate({left:"-="+getLeftPosi()+"px"},'slow',function(){
-  	
-  	});
-});    
-     
-     
+     var reAdjust = function () {
+          if (($('.wrapper').outerWidth()) < widthOfList()) {
+               $('.scroller-right').show();
+          } else {
+               $('.scroller-right').hide();
+          }
+
+          if (getLeftPosi() < 0) {
+               $('.scroller-left').show();
+          } else {
+               $('.item').animate({
+                    left: "-=" + getLeftPosi() + "px"
+               }, 'slow');
+               $('.scroller-left').hide();
+          }
+     }
+
+     reAdjust();
+
+     $(window).on('resize', function (e) {
+          reAdjust();
+     });
+
+     $('.scroller-right').click(function () {
+
+          $('.scroller-left').fadeIn('slow');
+          $('.scroller-right').fadeOut('slow');
+
+          $('.list').animate({
+               left: "+=" + widthOfHidden() + "px"
+          }, 'slow', function () {
+
+          });
+     });
+
+     $('.scroller-left').click(function () {
+
+          $('.scroller-right').fadeIn('slow');
+          $('.scroller-left').fadeOut('slow');
+
+          $('.list').animate({
+               left: "-=" + getLeftPosi() + "px"
+          }, 'slow', function () {
+
+          });
+     });
+
+
 
 }
 
@@ -196,68 +200,68 @@ function timeFormat(h, m = '00') {
 
 
 
-          $( "#btnSubmitContact" ).on( "click", function (event) {
-				
-               $('#ldrMsgEmail').html('checking form information');
-               $('#ldrDivEmail').show();
-				
-               var formData = {
-                    'name'              : $('input[name=name]').val(),
-                    'email'             : $('input[name=email]').val(),
-                    'message'    		  : $('#message').val()
-               };
-				
-			if(formData.name == ""){
-                    $('#fbName').html('You must enter a name to conact us.');
-                    $('#ldrDivEmail').hide();
-				Event.preventDefault;
-               }else{
-				$('#fbName').html('');
-			}
-				
-			if(formData.email == ""){
-                    $('#fbEmail').html('You must enter an email address to conact us.');
-                    $('#ldrDivEmail').hide();
-				Event.preventDefault;
-			}else{
-				$('#fbEmail').html('');
-			}
-				
-			if(formData.message == ""){
-				$('#fbMessage').html('You must enter a message to conact us.');
-                    $('#ldrDivEmail').hide();
-				Event.preventDefault;
-			}else{
-				$('#fbMessage').html('');
-			}
-				
-               // process the form
-               $('#ldrMsgEmail').html('sending your email now');
-               $.ajax({
-                    type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                    url         : 'https://raccwebchallenge.com/process-email-form.php', // the url where we want to POST
-                    data        : formData, // our data object
-                    dataType    : 'json', // what type of data do we expect back from the server
-                    encode          : true
-               })
-               
-               // using the done promise callback
-                    .done(function(data) {
-                         $('#ldrMsgEmail').html('Your message has been sent!');
-                         // log data to the console so we can see
-                         console.log(data); 
+$("#btnSubmitContact").on("click", function (event) {
 
-                         // here we will handle errors and validation messages
-                    })
-                    .fail(function(event) {
-                         alert( "Error: " + Error(event) + "\nStatus: " + status );
-                    })
-                    .always(function(data) {
-                         //alert( "Every Time " + status +" - "+data );
-                         $('#ldrMsgEmail').html('');
-                         $('#ldrDivEmail').hide();
-                    });
+     $('#ldrMsgEmail').html('checking form information');
+     $('#ldrDivEmail').show();
 
-        			// stop the form from submitting the normal way and refreshing the page
-        			event.preventDefault();
-			});
+     var formData = {
+          'name': $('input[name=name]').val(),
+          'email': $('input[name=email]').val(),
+          'message': $('#message').val()
+     };
+
+     if (formData.name == "") {
+          $('#fbName').html('You must enter a name to conact us.');
+          $('#ldrDivEmail').hide();
+          Event.preventDefault;
+     } else {
+          $('#fbName').html('');
+     }
+
+     if (formData.email == "") {
+          $('#fbEmail').html('You must enter an email address to conact us.');
+          $('#ldrDivEmail').hide();
+          Event.preventDefault;
+     } else {
+          $('#fbEmail').html('');
+     }
+
+     if (formData.message == "") {
+          $('#fbMessage').html('You must enter a message to conact us.');
+          $('#ldrDivEmail').hide();
+          Event.preventDefault;
+     } else {
+          $('#fbMessage').html('');
+     }
+
+     // process the form
+     $('#ldrMsgEmail').html('sending your email now');
+     $.ajax({
+          type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+          url: 'https://raccwebchallenge.com/process-email-form.php', // the url where we want to POST
+          data: formData, // our data object
+          dataType: 'json', // what type of data do we expect back from the server
+          encode: true
+     })
+
+     // using the done promise callback
+     .done(function (data) {
+               $('#ldrMsgEmail').html('Your message has been sent!');
+               // log data to the console so we can see
+               //console.log(data); 
+
+               // here we will handle errors and validation messages
+          })
+          .fail(function (event) {
+               alert("Error: " + Error(event) + "\nStatus: " + status);
+          })
+          .always(function (data) {
+               //alert( "Every Time " + status +" - "+data );
+               $('#ldrMsgEmail').html('');
+               $('#ldrDivEmail').hide();
+          });
+
+     // stop the form from submitting the normal way and refreshing the page
+     event.preventDefault();
+});

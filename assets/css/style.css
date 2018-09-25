@@ -91,7 +91,10 @@ h3, h4 {
      text-align: center;
      font-size: 30px;
 }
-.modal-header, .modal-body {
+.modal-header {
+     padding: 10px;
+}
+.modal-body {
      padding: 40px 50px;
 }
 .nav-tabs li a {
@@ -294,6 +297,18 @@ span.session-title {
      -moz-box-sizing: border-box;
      box-sizing: border-box;
 }
-.box-item .box-post h1..post-title {
- font-size:10pt;
+.box-item .box-post h1.post-title {
+     font-size: 10pt;
+}
+.team-card.text-center.bg-info {
+     padding: 10px;
+     /* width: 20%; */
+     min-width: 150px;
+     max-width: 200px;
+     /* border-radius: 25%; */
+     box-shadow: 2px 2px 5px #050505;
+     border-radius: 10px;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border: 1px solid #000000;
 }
