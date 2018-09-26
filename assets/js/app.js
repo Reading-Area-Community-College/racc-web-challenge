@@ -12,7 +12,7 @@ $(document).ready(function () {
 
      // Add smooth scrolling to all links in navbar + footer link
      $(".navbar a, footer a[href='#home']").on('click', function (event) {
-
+          if(this.hash.includes("#")){
           // Prevent default anchor click behavior
           event.preventDefault();
 
@@ -28,6 +28,7 @@ $(document).ready(function () {
                // Add hash (#) to URL when done scrolling (default click behavior)
                window.location.hash = hash;
           });
+          }
      });
 })
 

@@ -312,3 +312,19 @@ span.session-title {
      -webkit-border-radius: 10px;
      border: 1px solid #000000;
 }
+.team-card {
+     padding: 20px;
+     margin: 20px auto;
+     min-width: 100px;
+}
+#parSchools {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+}
+
+img.school-logo {
+    width: 25px;
+    padding-right: 6px;
+    margin-left: -12px;
+}
