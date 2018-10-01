@@ -298,10 +298,10 @@ $(document).ready(function () {
           document.getElementById(divId).className = ''; /* or $('#'+divid).removeAttr('class'); */
 
      });
-     $('#teams a').click(function (e) {
+     $('.team-info-bnt').click(function (e) {
           e.preventDefault();
-          console.log($(this).siblings(".card-title")[0].innerHTML);
-          $('#teamModal .modal-header').html('<h1>' + $(this).siblings(".card-title")[0].innerHTML + '</h1><h5>' + $(this).siblings(".card-text")[0].innerHTML + '</h5>');
+          console.log($(this).siblings("h6")[0].innerHTML);
+          $('#teamModal .modal-header').html('<h1>' + $(this).siblings("h6")[0].innerHTML + '</h1><h5>' + $(this).siblings(".team-tag-line")[0].innerHTML + '</h5>');
           $('#teamModal').modal('show');
      });
 });
