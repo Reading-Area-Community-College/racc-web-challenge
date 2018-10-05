@@ -485,6 +485,7 @@ img.school-logo {
 .schedule-card{
     position: relative;
     margin-bottom: 0.7em;
+    cursor: pointer;
 }
 .schedule-card:hover .insidebox {
     transform: scale(1.033);
