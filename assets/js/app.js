@@ -113,6 +113,10 @@ function getContent() {
                     printElement('#scheduleModal .modal-body');
                });
 
+                        $('#printDayScheduleModalBtn').click(function (e) {
+                                   printElement('#dayScheduleModal .modal-body');
+                              });
+
                reAdjust();
 
           },
@@ -263,7 +267,7 @@ $("#btnSubmitContact").on("click", function (event) {
      .done(function (data) {
                $('#ldrMsgEmail').html('Your message has been sent!');
                // log data to the console so we can see
-               //console.log(data); 
+               //console.log(data);
 
                // here we will handle errors and validation messages
           })
