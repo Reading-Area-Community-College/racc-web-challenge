@@ -1,7 +1,7 @@
 var parentPageID = 1841;
 var targetDomain = 'raccreallife.com';
 //var menuPath = 'https://'+targetDomain+'/wp-json/wp-api-menus/v2/menus/66';
-var eventsPath = 'https://' + targetDomain + '/wp-json/tribe/events/v1/events/?categories=68&per_page=100';
+var eventsPath = 'https://' + targetDomain + '/wp-json/tribe/events/v1/events/?categories=68&start_date=2018-10-01%2019:59:00&per_page=100';
 var pagesPath = 'https://' + targetDomain + '/wp-json/wp/v2/pages';
 var defaultHomePage = 1808;
 
@@ -31,6 +31,9 @@ $(document).ready(function() {
       });
     }
   });
+     
+     popup.init();
+     
 })
 
 
@@ -67,12 +70,12 @@ function getContent() {
 
         item.tags.forEach(function(item) {
           if (item.name == 'scrum') {
-            tabIcon = 'chalkboard-teacher';
             timeSlots = '8:30 AM to 9:30 AM & 12:30 PM to 1:30 PM';
           }
         });
 
         if (item.venue.venue === 'WebEx') {
+          tabIcon = 'chalkboard-teacher';
           theVenue = 'WebEx<br /> Link will be provided the day of the meeting.';
         } else {
           theVenue = item.venue.venue + '<br />' + item.venue.address + ', ' + item.venue.city + ' ' + item.venue.zip;
@@ -307,6 +310,10 @@ $(document).ready(function() {
     e.preventDefault();
     console.log($(this).siblings("h6")[0].innerHTML);
     $('#teamModal .modal-header').html('<h1>' + $(this).siblings("h6")[0].innerHTML + '</h1><h5>' + $(this).siblings(".team-tag-line")[0].innerHTML + '</h5>');
+       $('#teamModal .card-row').hide();
+       console.log($(this).data("team"));
+       let curTeam = '#teamModal .'+$(this).data("team");
+       $(curTeam).show();
     $('#teamModal').modal('show');
   });
 });
@@ -324,7 +331,7 @@ $(window).ready(function cardInfoUpdate() {
       url: pagesPath + '/' + pgId[1],
       dataType: 'json',
       success: function(data) {
-        $(".schedule-warp").html('<a class="infoBack" style="cursor:pointer;"><i class="far fa-arrow-alt-circle-left fa-3x"></i></a><h1>'+data.title.rendered+'</h1><div>'+data.content.rendered+'</div>');
+        $(".schedule-warp").html('<a class="infoBack" style="cursor:pointer;"><i class="far fa-arrow-alt-circle-left fa-2x"></i></a><h1>'+data.title.rendered+'</h1><div>'+data.content.rendered+'</div>');
         //$(".schedule-warp").fadeIn(1000);
         $(".schedule-warp .infoBack").click(function() {
           //$(".schedule-warp").fadeOut(1000);
@@ -350,3 +357,39 @@ $(".navbar-nav li a").click(function() {
   console.log(this.id);
   ga('send', 'event', 'Page Clicks', 'Click to scroll', this.id);
 });
+
+    popup = {
+  init: function(){
+    $('figure').click(function(){
+      popup.open($(this));
+    });
+    
+    $(document).on('click', '.popup img', function(){
+      return false;
+    }).on('click', '.popup', function(){
+      popup.close();
+    })
+  },
+  open: function($figure) {
+    $('.gallery').addClass('pop');
+    $popup = $('<div class="popup" />').appendTo($('body'));
+    $fig = $figure.clone().appendTo($('.popup'));
+    $bg = $('<div class="bg" />').appendTo($('.popup'));
+    $close = $('<div class="close"><svg><use xlink:href="#close"></use></svg></div>').appendTo($fig);
+    $shadow = $('<div class="shadow" />').appendTo($fig);
+    src = $('img', $fig).attr('src');
+    $shadow.css({backgroundImage: 'url(' + src + ')'});
+    $bg.css({backgroundImage: 'url(' + src + ')'});
+    setTimeout(function(){
+      $('.popup').addClass('pop');
+    }, 10);
+  },
+  close: function(){
+    $('.gallery, .popup').removeClass('pop');
+    setTimeout(function(){
+      $('.popup').remove()
+    }, 100);
+  }
+}
+
+

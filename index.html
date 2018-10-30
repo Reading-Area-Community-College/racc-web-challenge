@@ -1,467 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <title>2018 RACC Web Design Challenge</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </head>
-
-    <body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <a id="logoLink" class="navbar-brand" href="#home"> <img src="assets/images/logos/racc-logo.png" alt="Reading Area Community College" width="134"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li> <a id="homeLink" href="#home">home</a> </li>
-                        <li> <a id="challengeLink" href="#challenge">challenge</a> </li>
-                        <li> <a id="teamsLink" href="#teams">teams</a> </li>
-                        <li> <a id="scheduleLink" href="#schedule">schedule</a> </li>
-                        <li> <a id="learnMoreLink" href="#learnMore">learn more</a> </li>
-                        <li> <a id="contactLink" href="#contact">contact</a> </li>
-                        <li>
-                            <div id="parSchool" class="btn-group">
-                                <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Participating Schools <span class="caret"></span> </button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <!--
+     <head>
+          <title>2018 RACC Web Design Challenge</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+          <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+          <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     </head>
+     
+     <body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+          <nav class="navbar navbar-default navbar-fixed-top">
+               <div class="container-fluid">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                         <a id="logoLink" class="navbar-brand" href="#home"> <img src="assets/images/logos/racc-logo.png" alt="Reading Area Community College" width="134"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                         <ul class="nav navbar-nav navbar-right">
+                              <li> <a id="homeLink" href="#home">home</a> </li>
+                              <li> <a id="challengeLink" href="#challenge">challenge</a> </li>
+                              <li> <a id="teamsLink" href="#teams">teams</a> </li>
+                              <li> <a id="galleryLink" href="#gallery">gallery</a> </li>
+                              <li> <a id="learnMoreLink" href="#learnMore">learn more</a> </li>
+                              <li> <a id="scheduleLink" href="#schedule">schedule</a> </li>
+                              <li> <a id="contactLink" href="#contact">contact</a> </li>
+                              <li>
+                                   <div id="parSchool" class="btn-group">
+                                        <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Participating Schools <span class="caret"></span> </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                             <!--
                                              <li><a href="https://www.governormifflinsd.org/" target="_blank"><img src="assets/images/logos/mifflin-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Governor Mifflin School District website.">Governor Mifflin School District</a></li>
                                              <li><a href="https://www.wilsonsd.org/" target="_blank"><img src="assets/images/logos/wilson-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Wilson School District website.">Wilson School District</a></li>
                                              <li><a href="https://www.schuylkillvalley.org/" target="_blank"><img src="assets/images/logos/schuylkillvalley-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Schuylkill Valley School District website.">Schuylkill Valley School District</a></li>
                                              -->
-                                    <li><a href="https://www.muhlsdk12.org/" target="_blank"><img src="assets/images/logos/muhlenberg-logo.png" width="50px" class="school-logo" alt="Click here to visit the Muhlenberg School District  website.">Muhlenberg
-                                            School District</a></li>
-                                    <li><a href="https://www.readingsd.org/" target="_blank"><img src="assets/images/logos/reading-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Reading School District website.">Reading
-                                            School District</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div id="topCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#topCarousel" data-slide-to="0" class="active"> </li>
-                <li data-target="#topCarousel" data-slide-to="1"> </li>
-                <li data-target="#topCarousel" data-slide-to="2"> </li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="assets/images/damian-zaleski-843-unsplash.jpg" alt="Creative Title">
-                    <div class="carousel-caption">
-                        <h3>The RACC Web Design Challenge is about teaching excellence in the web profession.</h3>
+                                             <li><a href="https://www.muhlsdk12.org/" target="_blank"><img src="assets/images/logos/muhlenberg-logo.png" width="50px" class="school-logo" alt="Click here to visit the Muhlenberg School District  website.">Muhlenberg
+                                                  School District</a></li>
+                                             <li><a href="https://www.readingsd.org/" target="_blank"><img src="assets/images/logos/reading-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Reading School District website.">Reading
+                                                  School District</a></li>
+                                        </ul>
+                                   </div>
+                              </li>
+                         </ul>
                     </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/rawpixel-653764-unsplash.jpg" alt="Creative Title">
-                    <div class="carousel-caption">
-                        <h3>The Challenge simulates real world experiences</h3>
+               </div>
+          </nav>
+          <div id="topCarousel" class="carousel slide" data-ride="carousel">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                    <li data-target="#topCarousel" data-slide-to="0" class="active"> </li>
+                    <li data-target="#topCarousel" data-slide-to="1"> </li>
+                    <li data-target="#topCarousel" data-slide-to="2"> </li>
+               </ol>
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                         <img src="assets/images/damian-zaleski-843-unsplash.jpg" alt="Creative Title">
+                         <div class="carousel-caption">
+                              <h3>The RACC Web Design Challenge is about teaching excellence in the web profession.</h3>
+                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/slider/graduation.jpg" alt="Creative Title">
-                    <div class="carousel-caption">
-                        <h3>Empowering the creative, technically proficient and business-savvy student to succeed</h3>
+                    <div class="item">
+                         <img src="assets/images/rawpixel-653764-unsplash.jpg" alt="Creative Title">
+                         <div class="carousel-caption">
+                              <h3>The Challenge simulates real world experiences</h3>
+                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#topCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control"
+                    <div class="item">
+                         <img src="assets/images/slider/graduation.jpg" alt="Creative Title">
+                         <div class="carousel-caption">
+                              <h3>Empowering the creative, technically proficient and business-savvy student to succeed</h3>
+                         </div>
+                    </div>
+               </div>
+               <!-- Left and right controls --> 
+               <a class="left carousel-control" href="#topCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control"
               href="#topCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
-        </div>
-        <!-- Container (The WEB CHALLENGE Section) -->
-        <div id="challenge" class="container text-center">
-            <h3>RACC Web Design Challenge</h3>
-            <p> <em>High School Website Challenge</em> </p>
-            <p>For Academic Year 2018 – 2019, RACC proposes as a pilot for a "High School Build a Better Website Contest" by partnering with Reading Muhlenberg Career & Technology Center and Berks County Career and Technology Center. As a voluntary
-                challenge, CTC students will work in teams to create a website for Jump Start Incubator over the course of four months, October 5, 2018 – January 31, 2019.</p>
-            <p>“The web app development program at RACC is redrawing and redefining the boundaries of conventional and creative thought as a preeminent academic center. Our rigorous, multidimensional environment dissolves walls between disciplines
-                and helps nurture progressive minds.” –</p>
-            <p><strong><em>-Brian Savage, RACC Website Development Program Coordinator and Associate Professor</em></strong></p>
-            <img src="assets/images/logos/Web Contest Logo.png" alt="" width="300px" style="margin: auto"> <br>
-        </div>
-        <!-- Container (teams Section) -->
-        <div id="teams" class="bg-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h3 class="text-center">The Teams</h3>
-                        <p class="text-center">meet the teams... <br>
-                            <br>
-                        </p>
+          </div>
+          <!-- Container (The WEB CHALLENGE Section) -->
+          <div id="challenge" class="container text-center">
+               <h3>RACC Web Design Challenge</h3>
+               <p> <em>High School Website Challenge</em> </p>
+               <p>For Academic Year 2018 – 2019, RACC proposes as a pilot for a "High School Build a Better Website Contest" by partnering with Reading Muhlenberg Career & Technology Center and Berks County Career and Technology Center. As a voluntary
+                    challenge, CTC students will work in teams to create a website for Jump Start Incubator over the course of four months, October 5, 2018 – January 31, 2019.</p>
+               <p>“The web app development program at RACC is redrawing and redefining the boundaries of conventional and creative thought as a preeminent academic center. Our rigorous, multidimensional environment dissolves walls between disciplines
+                    and helps nurture progressive minds.” –</p>
+               <p><strong><em>-Brian Savage, RACC Website Development Program Coordinator and Associate Professor</em></strong></p>
+               <img src="assets/images/logos/Web Contest Logo.png" alt="" width="300px" style="margin: auto"> <br>
+          </div>
+          <!-- Container (teams Section) -->
+          <div id="teams" class="bg-1">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-lg-12">
+                              <h3 class="text-center">The Teams</h3>
+                              <p class="text-center">meet the teams... <br>
+                                   <br>
+                              </p>
+                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/001.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM A</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
+                    <div class="row">
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/blue-bats.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Blue Bats</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/brown-monkeys.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Brown Monkeys</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="brown-monkeys">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/turquoise-turtle.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Turquoise Turtles</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="turquoise-turtle">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/purple-beetles.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center"  >
+                                   <h6 class="clrd-font">Purple Beetles</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="purple-beetles">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/rwc-logo.fw.png" alt="" />
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/yellow-lama.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Yellow Lamas</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="yellow-lama">Learn more</a>
+                              </div>
+                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/002.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM B</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/003.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM C</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/004.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM D</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/005.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM E</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/006.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM F</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/007.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM G</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-                        <img src="assets/images/placeholders/290x300/008.jpg" alt="" />
-                        <div class="portfolio_images_overlay text-center">
-                            <h6 class="clrd-font">TEAM H</h6>
-                            <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
-                            <a href="#" class="btn btn-primary team-info-bnt">Learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="teamModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4> Title </h4>
-                        <h6></h6>
-                    </div>
-                    <div class="modal-body text-center" style="overflow: auto;">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img class="card-img-top img-circle" src="https://via.placeholder.com/150x150" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Member Name</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               </div>
+          </div>
+          <div id="teamModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4> Title </h4>
+                              <h6></h6>
+                         </div>
+                         <div class="modal-body text-center" style="overflow: auto;">
+                              <div class="container-fluid">
+                                   <div class="row card-row brown-monkeys">
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Adrianna-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Adrianna</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img class="card-img-top img-circle" src="https://via.placeholder.com/150x150" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Member Name</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Luis-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Luis</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img class="card-img-top img-circle" src="https://via.placeholder.com/150x150" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Member Name</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem; brown-monkeys">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Ethan-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Ethan</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img class="card-img-top img-circle" src="https://via.placeholder.com/150x150" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Member Name</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                   </div>
+                                   <div class="row card-row turquoise-turtle">
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Hector-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Hector</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img class="card-img-top img-circle" src="https://via.placeholder.com/150x150" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Member Name</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Richie-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Richie</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img class="card-img-top img-circle" src="https://via.placeholder.com/150x150" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Member Name</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                   </div>
+                                   <div class="row card-row purple-beetles">
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Giovanni-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Giovanni</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Jordy-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Jordy</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Nik-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Nik</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row yellow-lama">
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Everett-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Giovanni</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Isarel-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Jordy</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+               </div>
+          </div>
+          <!-- Lesrning schedule Modal -->
+          <div class="modal fade" id="scheduleModal" role="dialog">
+               <div class="modal-dialog" style="width:80%; max-width:800px;">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4></h4>
+                         </div>
+                         <div class="modal-body" style="overflow: auto;">
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                              <button type="submit" id="printLessonItemsBtn01" class="btn btn-danger btn-default pull-right"> <span class="glyphicon glyphicon-print"></span> Print </button>
+                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Lesrning schedule Modal -->
-        <div class="modal fade" id="scheduleModal" role="dialog">
-            <div class="modal-dialog" style="width:80%; max-width:800px;">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4></h4>
+               </div>
+          </div>
+          <!-- Container (The challenge Section) -->
+          <div id="gallery">
+               <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                         <!-- Indicators -->
+                         <ol class="carousel-indicators">
+                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#myCarousel" data-slide-to="1"></li>
+                         </ol>
+                         
+                         <!-- Wrapper for slides -->
+                         <div class="carousel-inner">
+                              <div class="item active">
+                                   <div class="row">
+                                        <div class="gallery">
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4884.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4889.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4894.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4896.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4907.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4909.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4915.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4916.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4927.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4937.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4941.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="item">
+                                   <div class="row">
+                                        <div class="gallery">
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4927.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4937.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                             <figure> <img src="assets/images/classroom-visit/IMG_4941.jpg" alt="" />
+                                                  <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                             </figure>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+                                             <symbol id="close" viewBox="0 0 18 18">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
+			S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
+			l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
+			c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
+			s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z"/>
+                                             </symbol>
+                                        </svg>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- Left and right controls --> 
+                         <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a>
                     </div>
-                    <div class="modal-body" style="overflow: auto;">
+               </div>
+          </div>
+          <div id="learnMore" class="bg-1">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-12">
+                              <h3 class="text-center">About Jump Start Incubator</h3>
+                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
-                        <button type="submit" id="printLessonItemsBtn01" class="btn btn-danger btn-default pull-right"> <span class="glyphicon glyphicon-print"></span> Print </button>
+                    <div class="row">
+                         <div class="col-md-12">
+                              <p>Jump Start Incubator is a temporary home for start-up businesses in the Greater Reading Area. It provides them with the intellectual and leadership capital necessary for their success during their critical development
+                                   period, and helps businesses to become self-sufficient and reach their potential. Jump Start Incubator helps to launch and grow exciting, innovative firms that will become the cornerstones of a revitalized city. The
+                                   incubator serves entrepreneurs as they navigate the pre-incubation, incubation and graduation stages of business startup. On-site tenant clients are headquartered in business suites with access to a comprehensive
+                                   communications/IT package, conference facilities, and a receptionist.</p>
+                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Container (The challenge Section) -->
-        <div id="schedule" class="container text-center">
-            <h3>Schedule</h3>
-            <!-- <p> <em>Let's learn together!</em> </p> -->
-            <p>Content to explaine schedule</p>
-            <br>
-            <div class="scroller scroller-left">
-                <i class="glyphicon glyphicon-chevron-left"></i>
-            </div>
-            <div class="scroller scroller-right">
-                <i class="glyphicon glyphicon-chevron-right"></i>
-            </div>
-            <div class="wrapper">
-                <ul class="nav nav-tabs responsive list" id="sessionTabs">
-                </ul>
-            </div>
-            <div class="tab-content responsive">
-                <i class="fas fa-cog fa-spin"></i> Loading Session Dates...
-            </div>
-            <button class="btn" data-toggle="modal" data-target="#scheduleModal">View List</button>
-
-            <button type="submit" id="printLessonItemsBtn02" class="btn"> <span class="glyphicon glyphicon-print"></span> Print </button>
-        </div>
-        <!-- day schedule Modal -->
-        <div class="modal fade" id="dayScheduleModal" role="dialog">
-            <div class="modal-dialog" style="width:80%; max-width:800px;">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4>October 5th 2018 Schedule</h4>
+                    <div class="row">
+                         <div class="col-lg-12 text-center">
+                              <img src="assets/images/logos/jump-start-incubator-logo.png" class="img-responsive bg-info img-rounded" style="padding: 10px; margin: auto auto; max-width: 250px;" alt="">
+                         </div>
                     </div>
-                    <div class="modal-body" style="overflow: auto;">
-
-                        <div class="col-md-12">
-                            <div class="schedule-warp">
-                                <div class="day-one">DAY 1 | Welcome to the Challenge</div>
-
-                                <div id="sc-2137" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">9:00 AM<br />RM: P126</span>
-                                        <span class="schedule-start">
-                                            <strong>Introductions</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Meet Brian Savage, Lisa Parson
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-1838" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">9:30 AM<br />RM: P126</span>
-                                        <span class="schedule-start">
-                                            <strong>Discuss the RACC Web Challenge</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Rules, Judging, Expectations
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-2140" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">10:00 AM<br />RM: P126</span>
-                                        <span class="schedule-start">
-                                            <strong>Discuss Technology</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Access to Servers, Resources, Communication Resources
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-2142" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">10:30 AM<br />RM: P126</span>
-                                        <span class="schedule-start">
-                                            <strong>Prepare To Meet The Client</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Preview the clients site and discuss points to explore with the client.
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-2144" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">11:00 AM<br />RM: ????</span>
-                                        <span class="schedule-start">
-                                            <strong>Break For Lunch</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Lunch will be provided.
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-2146" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">12:30 PM<br />RM: 126</span>
-                                        <span class="schedule-start">
-                                            <strong>Meet The Client</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Meet June Clougher, Director of Jump Start Incubator<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- and Jason Brudereck, Director of Communication of Jump Start Incubator.
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-2149" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">1:30 PM<br />RM: ????</span>
-                                        <span class="schedule-start">
-                                            <strong>Team Pictures</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- take team photos
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div id="sc-2151" class="schedule-card">
-                                    <div class="insidebox">
-                                        <span class="schedule-tag">2:00 PM<br />RM: ????</span>
-                                        <span class="schedule-start">
-                                            <strong>Departure</strong>
-                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Board buses to return to home schools.
-                                        </span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-
+               </div>
+          </div>
+          <div id="schedule" class="container text-center">
+               <h3>Schedule</h3>
+               <!-- <p> <em>Let's learn together!</em> </p> -->
+               <p>Content to explaine schedule</p>
+               <br>
+               <div class="scroller scroller-left">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+               </div>
+               <div class="scroller scroller-right">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+               </div>
+               <div class="wrapper">
+                    <ul class="nav nav-tabs responsive list" id="sessionTabs">
+                    </ul>
+               </div>
+               <div class="tab-content responsive">
+                    <i class="fas fa-cog fa-spin"></i> Loading Session Dates...
+               </div>
+               <button class="btn" data-toggle="modal" data-target="#scheduleModal">View List</button>
+               <button type="submit" id="printLessonItemsBtn02" class="btn"> <span class="glyphicon glyphicon-print"></span> Print </button>
+          </div>
+          <!-- day schedule Modal -->
+          <div class="modal fade" id="dayScheduleModal" role="dialog">
+               <div class="modal-dialog" style="width:80%; max-width:800px;">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4>October 5th 2018 Schedule</h4>
+                         </div>
+                         <div class="modal-body" style="overflow: auto;">
+                              <div class="col-md-12">
+                                   <div class="schedule-warp">
+                                        <div class="day-one">
+                                             DAY 1 | Welcome to the Challenge
+                                        </div>
+                                        <div id="sc-2137" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">9:00 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Introductions</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Meet Brian Savage, Lisa Parson </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-1838" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">9:30 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Discuss the RACC Web Challenge</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Rules, Judging, Expectations </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2140" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">10:00 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Discuss Technology</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Access to Servers, Resources, Communication Resources </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2142" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">10:30 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Prepare To Meet The Client</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Preview the clients site and discuss points to explore with the client. </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2144" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">11:00 AM<br />
+                                                  RM: ????</span> <span class="schedule-start"> <strong>Break For Lunch</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Lunch will be provided. </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2146" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">12:30 PM<br />
+                                                  RM: 126</span> <span class="schedule-start"> <strong>Meet The Client</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Meet June Clougher, Director of Jump Start Incubator<br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- and Jason Brudereck, Director of Communication of Jump Start Incubator. </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2149" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">1:30 PM<br />
+                                                  RM: ????</span> <span class="schedule-start"> <strong>Team Pictures</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- take team photos </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2151" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">2:00 PM<br />
+                                                  RM: ????</span> <span class="schedule-start"> <strong>Departure</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Board buses to return to home schools. </span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                              <button type="submit" id="printDayScheduleModalBtn" class="btn btn-danger btn-default pull-right"> <span class="glyphicon glyphicon-print"></span> Print </button>
+                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
-                        <button type="submit" id="printDayScheduleModalBtn" class="btn btn-danger btn-default pull-right"> <span class="glyphicon glyphicon-print"></span> Print </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Container (Contact Section) -->
-        <div id="learnMore" class="bg-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="text-center">About Jump Start Incubator</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Jump Start Incubator is a temporary home for start-up businesses in the Greater Reading Area. It provides them with the intellectual and leadership capital necessary for their success during their critical development
-                            period, and helps businesses to become self-sufficient and reach their potential. Jump Start Incubator helps to launch and grow exciting, innovative firms that will become the cornerstones of a revitalized city. The
-                            incubator serves entrepreneurs as they navigate the pre-incubation, incubation and graduation stages of business startup. On-site tenant clients are headquartered in business suites with access to a comprehensive
-                            communications/IT package, conference facilities, and a receptionist.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <img src="assets/images/logos/jump-start-incubator-logo.png" class="img-responsive bg-info img-rounded" style="padding: 10px; margin: auto auto; max-width: 250px;" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="contact">
-            <div class="container">
-                <h3 class="text-center">Contact</h3>
-                <p class="text-center"> <em>Let us know how we can help you!</em> </p>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p>Please contact us.</p>
-                        <p> <span class="glyphicon glyphicon-map-marker"></span> <a href="https://www.google.com/maps/place/Reading+Area+Community+College/@40.3344955,-75.9382694,17z/data=!4m13!1m7!3m6!1s0x89c670d26ae0e9c5:0x9c1eb479056ec940!2s10+S+2nd+St,+Reading,+PA+19602!3b1!8m2!3d40.3344955!4d-75.9360807!3m4!1s0x89c670d1f1f076fd:0x2c4bd1b030ade9a0!8m2!3d40.334699!4d-75.934596"
+               </div>
+          </div>
+          
+          <!-- Container (Contact Section) -->
+          
+          <div id="contact" class="bg-1">
+               <div class="container">
+                    <h3 class="text-center">Contact</h3>
+                    <p class="text-center"> <em>Let us know how we can help you!</em> </p>
+                    <div class="row">
+                         <div class="col-md-12 text-center">
+                              <p>Please contact us.</p>
+                              <p> <span class="glyphicon glyphicon-map-marker"></span> <a href="https://www.google.com/maps/place/Reading+Area+Community+College/@40.3344955,-75.9382694,17z/data=!4m13!1m7!3m6!1s0x89c670d26ae0e9c5:0x9c1eb479056ec940!2s10+S+2nd+St,+Reading,+PA+19602!3b1!8m2!3d40.3344955!4d-75.9360807!3m4!1s0x89c670d1f1f076fd:0x2c4bd1b030ade9a0!8m2!3d40.334699!4d-75.934596"
                               class="gmap">10 South Second Street, Reading, PA 19602 </a></p>
-                        <p> <span class="glyphicon glyphicon-phone"></span> Phone: 610-607-6219 </p>
-                        <p> <span class="glyphicon glyphicon-envelope"></span> Email: jcorbett@racc.edu </p>
+                              <p> <span class="glyphicon glyphicon-phone"></span> Phone: 610-607-6219 </p>
+                              <p> <span class="glyphicon glyphicon-envelope"></span> Email: jcorbett@racc.edu </p>
+                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <footer class="text-center">
-            <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP"> <span class="glyphicon glyphicon-chevron-up"></span> </a> <br>
-            <br>
-        </footer>
-        <div id="lgModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4> Title </h4>
+               </div>
+          </div>
+          <!-- Footer -->
+          <footer class="text-center">
+               <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP"> <span class="glyphicon glyphicon-chevron-up"></span> </a> <br>
+               <br>
+          </footer>
+          <div id="lgModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4> Title </h4>
+                         </div>
+                         <div class="modal-body" style="overflow: auto;">
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                         </div>
                     </div>
-                    <div class="modal-body" style="overflow: auto;">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="assets/js/responsive-tabs.js"></script>
-        <script src="assets/js/app.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123539134-1"></script>
-    </body>
-
+               </div>
+          </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+          <script src="assets/js/responsive-tabs.js"></script> 
+          <script src="assets/js/app.js"></script> 
+          <!-- Global site tag (gtag.js) - Google Analytics --> 
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123539134-1"></script>
+     </body>
 </html>
