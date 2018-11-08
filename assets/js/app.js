@@ -34,6 +34,65 @@ $(document).ready(function() {
      
      popup.init();
      
+     
+     
+    $.ajax({
+      method: 'GET',
+      url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL0zhzHpndEBucFr3MSz98xZZ1BJ1H0_TP&key=AIzaSyAMfDwOVgez3RuB36xTVttjjpXaxeBwf3w',
+      dataType: 'json',
+      success: function(data) {
+           let setWidth = 0;
+          data.items.forEach(function(item) {
+               setWidth = setWidth + 150;
+               /*
+               console.log(item.snippet);
+               console.log(item.snippet.thumbnails.default.url);
+               console.log(item.snippet.title);
+               console.log(item.snippet.resourceId.videoId);
+               */
+               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'http://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
+               /*
+                    setWidth = setWidth + 150;
+                    setWidth = setWidth + 150;
+                    $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'http://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'http://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
+               */
+          });
+           $('.vid-list').css('width', setWidth);
+           console.log('HERE: '+$(".vid-list-container").width());
+           console.log('IN HERE: '+$(".vid-list").width());
+           
+           if($(".vid-list").width() > $(".vid-list-container").width()){
+                    $(".arrow-right").bind("click", function (event) {
+                            event.preventDefault();
+                            $(".vid-list-container").stop().animate({
+                                scrollLeft: "+=336"
+                            }, 750);
+                        });
+                        $(".arrow-left").bind("click", function (event) {
+                            event.preventDefault();
+                            $(".vid-list-container").stop().animate({
+                                scrollLeft: "-=336"
+                            }, 750);
+                        });                  
+              }else{
+               $(".arrow-right, .arrow-left").hide();
+              
+              }
+               
+           $('#pills-images').tab('show');
+ 
+
+      }
+    });
+
+     
+     
+     
+     
+     
+     
+     
+     
 })
 
 
@@ -96,7 +155,7 @@ function getContent() {
       learningscheduleList = learningscheduleList.replace(/col-md-6/g, "col-md-12");
 
       $("#sessionTabs").html(topTabs);
-      $(".tab-content").html(tabContent);
+      $(".schedule-tabs").html(tabContent);
       $("#scheduleModal .modal-body").html('<div id="lessonListItems">' + learningscheduleList + '</div>');
       // $( "#lessonListItems > .row.col-md-6" ).removeClass( "col-md-6" );
       $('ul.nav.nav-tabs  a').click(function(e) {
