@@ -50,11 +50,11 @@ $(document).ready(function() {
                console.log(item.snippet.title);
                console.log(item.snippet.resourceId.videoId);
                */
-               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'http://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
+               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&showinfo=0&autohide=1&rel=0\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
                /*
                     setWidth = setWidth + 150;
                     setWidth = setWidth + 150;
-                    $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'http://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'http://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
+                    $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
                */
           });
            $('.vid-list').css('width', setWidth);
