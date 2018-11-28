@@ -317,11 +317,6 @@ span.session-title {
      margin: 20px auto;
      min-width: 100px;
 }
-#parSchools {
-     position: fixed;
-     top: 50px;
-     right: 0px;
-}
 img.school-logo {
      width: 25px;
      padding-right: 6px;
@@ -1028,19 +1023,19 @@ img {
 }
 
 @media (max-width: 624px) {
-     .arrows {
-          position: relative;
-          margin: 0 auto;
-          width: 96px;
-     }
-     .arrow-left {
-          left: 0;
-          top: -20px;
-     }
-     .arrow-right {
-          right: 0;
-          top: -20px;
-     }
+.arrows {
+     position: relative;
+     margin: 0 auto;
+     width: 96px;
+}
+.arrow-left {
+     left: 0;
+     top: -20px;
+}
+.arrow-right {
+     right: 0;
+     top: -20px;
+}
 }
 .nav-pills > li.active > a {
      background-color: #DDD;
@@ -1064,4 +1059,15 @@ img {
      color: #000 !important;
      font-size: 16px;
      margin: 10px;
+}
+.dropdown-menu {
+     position: fixed;
+     top: 50px;
+     right: 0px;
+     margin-top: 4px;
+     margin-right: 4px;
+}
+.img-circle {
+    border-radius: 50%;
+    margin: auto;
 }
