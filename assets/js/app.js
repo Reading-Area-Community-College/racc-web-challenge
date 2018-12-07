@@ -34,6 +34,8 @@ $(document).ready(function () {
 
      popup.init();
 
+
+
      $.ajax({
           method: 'GET',
           url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL0zhzHpndEBucFr3MSz98xZZ1BJ1H0_TP&key=AIzaSyAMfDwOVgez3RuB36xTVttjjpXaxeBwf3w',
@@ -48,12 +50,12 @@ $(document).ready(function () {
                     console.log(item.snippet.title);
                     console.log(item.snippet.resourceId.videoId);
                     */
-                    $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/' + item.snippet.resourceId.videoId + '?autoplay=1&showinfo=0&autohide=1&rel=0\'"><div class="thumb"><img src="' + item.snippet.thumbnails.default.url + '"></div><div class="desc">' + item.snippet.title + '</div></div>');
+                    $('.vid-list').prepend('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/' + item.snippet.resourceId.videoId + '?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="' + item.snippet.thumbnails.default.url + '"></div><div class="desc">' + item.snippet.title + '</div></div>');
                     /*
-                                        setWidth = setWidth + 150;
-                                        setWidth = setWidth + 150;
-                                        $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
-                                   */
+                         setWidth = setWidth + 150;
+                         setWidth = setWidth + 150;
+                         $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');               $('.vid-list').append('<div class="vid-item" onClick="document.getElementById(\'vid_frame\').src=\'https://youtube.com/embed/'+item.snippet.resourceId.videoId+'?autoplay=1&rel=0&showinfo=0&autohide=1\'"><div class="thumb"><img src="'+item.snippet.thumbnails.default.url+'"></div><div class="desc">'+item.snippet.title+'</div></div>');
+                    */
                });
                $('.vid-list').css('width', setWidth);
                console.log('HERE: ' + $(".vid-list-container").width());
@@ -78,9 +80,21 @@ $(document).ready(function () {
                }
 
                $('#pills-images').tab('show');
+
+
           }
      });
+
+
+
+
+
+
+
+
+
 })
+
 
 function getContent() {
 
@@ -126,6 +140,7 @@ function getContent() {
                          theVenue = item.venue.venue + '<br />' + item.venue.address + ', ' + item.venue.city + ' ' + item.venue.zip;
                     }
 
+
                     topTabs = topTabs + '<li  class="' + isHomeTab + '""> <a href="#' + item.id + '"> <i class="fas fa-' + tabIcon + '"></i>  ' + item.start_date_details.month + '-' + item.start_date_details.day + '</a> </li>';
 
                     tabContent = tabContent + '<div class="tab-pane ' + isHomeTab + '" id="' + item.id + '">' + item.description + '<div class="well"><div class="row"><div class="col-md-6"><strong>Location:</strong> ' + theVenue + '</div><div class="col-md-6"><strong>Date & Time:</strong> ' + startDate.toLocaleDateString("en-US", options) + ' <br /> ' + timeSlots + '</div></div></div></div>';
@@ -133,6 +148,7 @@ function getContent() {
                     isHomeTab = (isHomeTab === 'active') ? '' : '';
 
                     learningscheduleList = learningscheduleList + '<div class="lessonListItem"><div><strong>' + item.title + '</strong></div>' + item.description + '<div class="row" style="margin-left:5px"><div class="col-md-6" style="padding: 6px;"><strong>Location:</strong> ' + theVenue + '</div><div class="col-md-6" style="padding: 6px;"><strong>Date & Time:</strong> ' + startDate.toLocaleDateString("en-US", options) + ' | ' + timeSlots + '</div></div><div><hr></div>';
+
 
                });
 
@@ -154,6 +170,7 @@ function getContent() {
                     });
                     fakewaffle.responsiveTabs(['xs', 'sm']);
                })(jQuery);
+
 
                $('#printLessonItemsBtn01, #printLessonItemsBtn02').click(function (e) {
                     printElement('#scheduleModal .modal-body');
@@ -237,6 +254,9 @@ function getContent() {
 
           });
      });
+
+
+
 }
 
 function printElement(e) {
@@ -327,20 +347,20 @@ $("#btnSubmitContact").on("click", function (event) {
      event.preventDefault();
 });
 
+
+
+
 $(document).ready(function () {
      $('.gmap').click(function (e) {
           e.preventDefault();
           console.log(e.currentTarget.innerHTML);
           console.log(e);
-          if (e.currentTarget.innerHTML == '10 South Second Street, Reading, PA 19602') {
-               $('#lgModal .modal-body').html('<iframe src="' + e.currentTarget.href + '" width="100%" height="500px;"></iframe>');
-          }
-          $('#lgModal .modal-header').html(e.currentTarget.innerHTML);
-          $('#lgModal').modal('show');
-          var divId = 'summary' + $(this).attr('id');
-
-          document.getElementById(divId).className = ''; /* or $('#'+divid).removeAttr('class'); */
-
+          $('#mapModal .modal-header').html(e.currentTarget.innerHTML);
+          $('#mapModal .modal-body').html('<div class="mapouter"><div class="gmap_canvas"><iframe style="width:100%;" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=reading%20area%20communit&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-wiesbaden/"></a></div><style>.mapouter{text-align:right;height:400px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}</style></div>');
+          $('#mapModal').modal('show');
+          //$('#lgModal .modal-header').html(e.currentTarget.innerHTML);
+          //$('#lgModal').modal('show');
+          // var divId = 'summary' + $(this).attr('id');
      });
      $('.team-info-bnt').click(function (e) {
           e.preventDefault();
