@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>Evaluation</title>
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+
+          <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+          <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+          <!------ Include the above in your HEAD tag ---------->
+          
+          <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" />
+          <style>
+.nav-tabs {
+     border-bottom: 2px solid #DDD;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+     border-width: 0;
+}
+.nav-tabs > li > a {
+     border: none;
+     color: #ffffff;
+     background: #007faa;
+}
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+     border: none;
+     color: #007faa !important;
+     background: #fff;
+}
+.nav-tabs > li > a::after {
+     content: "";
+     background: #007faa;
+     height: 2px;
+     position: absolute;
+     width: 100%;
+     left: 0px;
+     bottom: -1px;
+     transition: all 250ms ease 0s;
+     transform: scale(0);
+}
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+     transform: scale(1);
+}
+.tab-nav > li > a::after {
+     background: ##007faa none repeat scroll 0% 0%;
+     color: #fff;
+}
+.tab-pane {
+     padding: 15px 0;
+}
+.tab-content {
+     padding: 20px
+}
+.nav-tabs > li {
+     width: 20%;
+     text-align: center;
+}
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+body {
+     background: #EDECEC;
+     padding: 50px
+}
+
+               iframe {
+    width: 100%;
+    /* position: sticky; */
+    /* top: 50px; */
+    /* bottom: 50px !important; */
+    /* max-height: 100%; */
+    height: 700px;
+}
+
+               
+@media all and (max-width:724px) {
+.nav-tabs > li > a > span {
+     display: none;
+}
+.nav-tabs > li > a {
+     padding: 5px 5px;
+}
+}
+               
+.container{
+          WIDTH: 100%;
+               }     </style>
+     </head>
+     <body>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12">
+                         <!-- Nav tabs -->
+                         <div class="card">
+                              <ul class="nav nav-tabs" role="tablist">
+                                   <li role="presentation" class="active">
+                                        <a href="#blueBat" aria-controls="blueBat" role="tab" data-toggle="tab"><i class="fa fa-blueBat"></i>  <span>Blue Bat</span></a>
+                                   </li>
+                                   <li role="presentation">
+                                        <a href="#brown-mokies" aria-controls="brown-mokies" role="tab" data-toggle="tab"><i class="fa fa-user"></i>  <span>Brown Monkeys</span></a>
+                                   </li>
+                                   <li role="presentation">
+                                        <a href="#purple-beetles" aria-controls="purple-beetles" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>  <span>Purple Beetles</span></a>
+                                   </li>
+                                   <li role="presentation">
+                                        <a href="#turq-turt" aria-controls="turq-turt" role="tab" data-toggle="tab"><i class="fa fa-cog"></i>  <span>Turquoise Turtles</span></a>
+                                   </li>
+                                   <li role="presentation">
+                                        <a href="#yellow-lama" aria-controls="yellow-lama" role="tab" data-toggle="tab"><i class="fa fa-plus-square-o"></i>  <span>Yellow Lamas</span></a>
+                                   </li>
+                              </ul>
+                              
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                   <div role="tabpanel" class="tab-pane active" id="blueBat">
+                                        <iframe src="bluebat.html" frameborder="0"></iframe>
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="brown-mokies">
+                                        <iframe src="brown.html" frameborder="0"></iframe>
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="purple-beetles">
+                                        <iframe src="purple.html" frameborder="0"></iframe>
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="turq-turt">
+                                        <iframe src="turquoise-turtles.html" frameborder="0"></iframe>
+                                   </div>
+                                   <div role="tabpanel" class="tab-pane" id="yellow-lama">
+                                        <iframe src="yellow-lama.html" frameborder="0"></iframe>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </body>
+</html>

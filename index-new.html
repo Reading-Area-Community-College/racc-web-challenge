@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <title>2018 RACC Web Design Challenge</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+          <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+          <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/vnd.microsoft.icon" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     </head>
+     
+     <body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+          <nav class="navbar navbar-default navbar-fixed-top">
+               <div class="container-fluid">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                         <a id="logoLink" class="navbar-brand" href="#home"> <img src="assets/images/logos/racc-logo.png" alt="Reading Area Community College" width="134"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                         <ul class="nav navbar-nav navbar-right">
+                              <li> <a id="homeLink" href="#home">home</a> </li>
+                              <li> <a id="challengeLink" href="#challenge">challenge</a> </li>
+                              <li> <a id="teamsLink" href="#teams">teams</a> </li>
+                              <li> <a id="galleryLink" href="#gallery">gallery</a> </li>
+                              <li> <a id="learnMoreLink" href="#learnMore">learn more</a> </li>
+                              <li> <a id="scheduleLink" href="#schedule">schedule</a> </li>
+                              <li> <a id="contactLink" href="#contact">contact</a> </li>
+                              <li>
+                                   <div id="parSchool" class="btn-group">
+                                        <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Participating Schools <span class="caret"></span> </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                             <li><a href="https://www.boyertownasd.org/" target="_blank"><img src="assets/images/logos/brandywine-heights-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Antietam Area School District website.">Antietam Area School District</a></li>
+                                             <li><a href="https://www.boyertownasd.org/" target="_blank"><img src="assets/images/logos/boyertownasd-logo.png" width="50px" class="school-logo" alt="Click here to visit the Boyertown Area School District website.">Boyertown Area School District</a></li>
+                                             <li><a href="http://www.bhasd.org/" target="_blank"><img src="assets/images/logos/brandywine-heights-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Brandywine Heights Area School District website.">Brandywine Heights Area School District</a></li>
+                                             <li><a href="https://www.conradweiser.org/" target="_blank"><img src="assets/images/logos/conrad-weiser-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Conrad Weiser Area School District website.">Conrad Weiser Area School District</a></li>
+                                             <li><a href="http://www.dboone.org/" target="_blank"><img src="assets/images/logos/danielboon-logo.png" width="50px" class="school-logo" alt="Click here to visit the Daniel Boone Area School District website.">Daniel Boone Area School District</a></li>
+                                             <li><a href="https://www.exeter.k12.pa.us/" target="_blank"><img src="assets/images/logos/exeter-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Exeter Township School District website.">Exeter Township School District</a></li>
+                                             <li><a href="http://www.fleetwoodasd.k12.pa.us/" target="_blank"><img src="assets/images/logos/fleetwood-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Fleetwood Area School District website.">Fleetwood Area School District</a></li>
+                                             <li><a href="http://www.governormifflinsd.org/" target="_blank"><img src="assets/images/logos/mifflin-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Governor Mifflin Area School District website.">Governor Mifflin Area School District</a></li>
+                                             <li><a href="https://www.hasdhawks.org/" target="_blank"><img src="assets/images/logos/hasdhawks-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Hamburg Area School District website.">Hamburg Area School District</a></li>
+                                             <li><a href="https://www.kasd.org/" target="_blank"><img src="assets/images/logos/kasd-logo.png" width="50px" class="school-logo" alt="Click here to visit the Kutztown Area School District website.">Kutztown Area School District</a></li>
+                                             <li><a href="https://www.muhlsdk12.org/" target="_blank"><img src="assets/images/logos/muhlenberg-logo.png" width="50px" class="school-logo" alt="Click here to visit the Muhlenberg Area School District website.">Muhlenberg Area School District</a></li>
+                                             <li><a href="https://www.oleyvalleysd.org/" target="_blank"><img src="assets/images/logos/oley-logo.png" width="50px" class="school-logo" alt="Click here to visit the Oley Valley School District website.">Oley Valley School District</a></li>
+                                             <li><a href="https://www.readingsd.org/" target="_blank"><img src="assets/images/logos/reading-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Reading Area School District website.">Reading Area School District</a></li>
+                                             <li><a href="https://www.schuylkillvalley.org/" target="_blank"><img src="assets/images/logos/schuylkillvalley-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Schuylkill Valley School District website.">Schuylkill Valley School District</a></li>
+                                             <li><a href="http://www.tulpehocken.org/" target="_blank"><img src="assets/images/logos/tulpehocken-logo.png" width="50px" class="school-logo" alt="Click here to visit the Tulpehocken Area School District website.">Tulpehocken Area School District</a></li>
+                                             <li><a href="http://www.tvsd.org/" target="_blank"><img src="assets/images/logos/twin-valley.png" width="50px" class="school-logo" alt="Click here to visit the Twin Valley School District website.">Twin Valley School District</a></li>
+                                             <li><a href="https://www.wilsonsd.org/" target="_blank"><img src="assets/images/logos/wilson-logo.jpg" width="50px" class="school-logo" alt="Click here to visit the Wilson Area School District website.">Wilson Area School District</a></li>
+                                             <li><a href="https://www.wyoarea.org/" target="_blank"><img src="assets/images/logos/wyo-logo.png" width="50px" class="school-logo" alt="Click here to visit the Wyomissing Area website.">Wyomissing Area School District</a></li>
+                                        </ul>
+                                   </div>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+          <div id="topCarousel" class="carousel slide" data-ride="carousel">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                    <li data-target="#topCarousel" data-slide-to="0" class="active"> </li>
+                    <li data-target="#topCarousel" data-slide-to="1"> </li>
+                    <li data-target="#topCarousel" data-slide-to="2"> </li>
+               </ol>
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                         <img src="assets/images/damian-zaleski-843-unsplash.jpg" alt="Creative Title">
+                         <div class="carousel-caption">
+                              <h3>The RACC Web Design Challenge is about teaching excellence in the web profession.</h3>
+                         </div>
+                    </div>
+                    <div class="item">
+                         <img src="assets/images/rawpixel-653764-unsplash.jpg" alt="Creative Title">
+                         <div class="carousel-caption">
+                              <h3>The Challenge simulates real world experiences</h3>
+                         </div>
+                    </div>
+                    <div class="item">
+                         <img src="assets/images/slider/graduation.jpg" alt="Creative Title">
+                         <div class="carousel-caption">
+                              <h3>Empowering the creative, technically proficient and business-savvy student to succeed</h3>
+                         </div>
+                    </div>
+               </div>
+               <!-- Left and right controls --> 
+               <a class="left carousel-control" href="#topCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control"
+              href="#topCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+          </div>
+          <!-- Container (The WEB CHALLENGE Section) -->
+          <div id="challenge" class="container text-center">
+                 <div class="container">
+             <h3>RACC Web Design Challenge</h3>
+               <p> <em>High School Website Challenge</em> </p>
+               <p>For Academic Year 2018 – 2019, RACC proposes as a pilot for a "High School Build a Better Website Contest" by partnering with Reading Muhlenberg Career & Technology Center and Berks County Career and Technology Center. As a voluntary
+                    challenge, CTC students will work in teams to create a website for Jump Start Incubator over the course of four months, October 5, 2018 – January 31, 2019.</p>
+               <p>“The web app development program at RACC is redrawing and redefining the boundaries of conventional and creative thought as a preeminent academic center. Our rigorous, multidimensional environment dissolves walls between disciplines
+                    and helps nurture progressive minds.” –</p>
+               <p><strong><em>-Brian Savage, RACC Website Development Program Coordinator and Associate Professor</em></strong></p>
+               <img src="assets/images/logos/Web Contest Logo.png" alt="" width="300px" style="margin: auto"> <br>
+          </div>
+          </div>
+          <div id="when" class="bg-1">
+                 <div class="container">
+             <h3>RRACC Website Design Challenge</h3>
+               <p>RACC Website Design Challenge
+February 10, 2019
+| 2 - 4 PM
+Miller Center for the Arts
+Reading Area Community College</p>
+          </div>
+          </div>
+          <div id="panel" class="container text-center">
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-header card-header-image">
+                        <a href="#pablo">
+                            <img class="img" src="https://i.ytimg.com/vi/7xWxpunlZ2w/maxresdefault.jpg">
+
+                            <div class="card-title">
+                                Tania Andrew
+                            </div>
+                        </a>
+                    <div class="colored-shadow" style="background-image: url('https://i.ytimg.com/vi/7xWxpunlZ2w/maxresdefault.jpg');opacity: 1;"></div></div>
+                    <div class="card-body ">
+                        <h6 class="card-category text-info">Web Designer</h6>
+
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+
+
+                    </div>
+                    <div class="card-footer justify-content-center">
+                        <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-link btn-instagram">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card card-profile"><div class="card-header card-header-image">
+                    <a href="#pablo">
+                        <img class="img" src="https://zsuttonphoto.com/wp-content/uploads/2014/02/Albuquerque-Portrait-Photography-11.jpg">
+                    </a>
+                <div class="colored-shadow" style="background-image: url('https://zsuttonphoto.com/wp-content/uploads/2014/02/Albuquerque-Portrait-Photography-11.jpg'); opacity: 1;"></div></div><div class="card-body ">
+                    <h4 class="card-title">Alec Thompson</h4>
+                    <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+
+
+                </div>
+                <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-just-icon btn-twitter btn-round">
+                        <i class="fa fa-twitter"></i>
+                        <div class="ripple-container"></div>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-facebook btn-round">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-google btn-round">
+                        <i class="fa fa-google"></i>
+                    </a>
+                </div>
+            </div>
+                
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card card-profile">
+                  <div class="card-avatar">
+                    <a href="#pablo">
+                      <img class="img" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTU0NjQzOTk4OTQ4OTkyMzQy/ansel-elgort-poses-for-a-portrait-during-the-baby-driver-premiere-2017-sxsw-conference-and-festivals-on-march-11-2017-in-austin-texas-photo-by-matt-winkelmeyer_getty-imagesfor-sxsw-square.jpg">
+                    </a>
+                  </div>
+                  <div class="card-body ">
+                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+    
+                        <h4 class="card-title">Alec Thompson</h4>
+    
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="#pablo" class="btn btn-info btn-round">Follow</a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-header card-header-image">
+                        <a href="#pablo">
+                            <img class="img" src="https://i.ytimg.com/vi/7xWxpunlZ2w/maxresdefault.jpg">
+
+                            <div class="card-title">
+                                Tania Andrew
+                            </div>
+                        </a>
+                    <div class="colored-shadow" style="background-image: url('https://i.ytimg.com/vi/7xWxpunlZ2w/maxresdefault.jpg');opacity: 1;"></div></div>
+                    <div class="card-body ">
+                        <h6 class="card-category text-info">Web Designer</h6>
+
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+
+
+                    </div>
+                    <div class="card-footer justify-content-center">
+                        <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-link btn-instagram">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card card-profile"><div class="card-header card-header-image">
+                    <a href="#pablo">
+                        <img class="img" src="https://zsuttonphoto.com/wp-content/uploads/2014/02/Albuquerque-Portrait-Photography-11.jpg">
+                    </a>
+                <div class="colored-shadow" style="background-image: url('https://zsuttonphoto.com/wp-content/uploads/2014/02/Albuquerque-Portrait-Photography-11.jpg'); opacity: 1;"></div></div><div class="card-body ">
+                    <h4 class="card-title">Alec Thompson</h4>
+                    <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+
+
+                </div>
+                <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-just-icon btn-twitter btn-round">
+                        <i class="fa fa-twitter"></i>
+                        <div class="ripple-container"></div>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-facebook btn-round">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-google btn-round">
+                        <i class="fa fa-google"></i>
+                    </a>
+                </div>
+            </div>
+                
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card card-profile">
+                  <div class="card-avatar">
+                    <a href="#pablo">
+                      <img class="img" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTU0NjQzOTk4OTQ4OTkyMzQy/ansel-elgort-poses-for-a-portrait-during-the-baby-driver-premiere-2017-sxsw-conference-and-festivals-on-march-11-2017-in-austin-texas-photo-by-matt-winkelmeyer_getty-imagesfor-sxsw-square.jpg">
+                    </a>
+                  </div>
+                  <div class="card-body ">
+                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+    
+                        <h4 class="card-title">Alec Thompson</h4>
+    
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="#pablo" class="btn btn-info btn-round">Follow</a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+               <style>
+               
+               
+.card-title{
+    font-weight: 700 !important;
+    margin-top: 10px;
+    color: #3c4858;
+    font-family: Roboto Slab,Times New Roman,serif;
+}
+.card {
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    border-radius: 6px !important;
+    color: rgba(0,0,0,.87);
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.card .card-body{
+    padding: .9375rem 1.875rem;
+}
+
+.card-description{
+    color: #999;
+}
+
+.card.card-profile{
+    text-align: center;
+}
+.card .card-header.card-header-image {
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+    max-height: 215px;
+}
+
+.card .card-header.card-header-image a {
+    display: block;
+}
+
+.card .card-header.card-header-image img {
+    width: 100%;
+    height: 215px;
+    border-radius: 6px;
+    pointer-events: none;
+    box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+.card .card-header.card-header-image .colored-shadow {
+    transform: scale(.94);
+    top: 12px;
+    filter: blur(12px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    transition: opacity .45s;
+    opacity: 1;
+}
+
+.card .card-header.card-header-image .card-title {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    color: #fff;
+    font-size: 1.125rem;
+    text-shadow: 0 2px 5px rgba(33,33,33,.5);
+    font-weight: 700;
+    font-family: 'Roboto Slab';
+}
+
+.card .card-category {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.card .card-body+.card-footer {
+    padding-top: 0;
+    border: 0;
+    border-radius: 6px;
+}
+
+.card .card-footer {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+}
+
+.card-profile .card-footer .btn.btn-just-icon{
+    font-size: 20px;
+    padding: 12px 13px;
+    line-height: 1em;
+}
+
+.card .card-footer {
+    padding: .9375rem 1.875rem;
+}
+
+
+.card-profile .card-body+.card-footer{
+    margin-top: -15px;
+}
+.card .text-info {
+    color: #00bcd4!important;
+}
+
+.card-profile .card-avatar {
+    width: 130px;
+    max-width: 130px;
+    max-height: 130px;
+    margin: -50px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+.card-profile .card-avatar img{
+    width: 100%;
+}
+.card-profile .card-avatar+.card-body{
+    margin-top: 15px;
+}
+
+
+.btn:not(.btn-just-icon){
+    position: relative;
+    padding: 12px 30px !important;
+    margin: .3125rem 1px;
+    font-size: .75rem !important;
+    font-weight: 400 !important;
+    line-height: 1.428571;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: .2rem;
+    outline: 0;
+}
+.btn.btn-just-icon.btn-round {
+    border-radius: 50%;
+    margin:.3125rem 1px;
+}
+.btn.btn-twitter {
+    color: #fff;
+    background-color: #55acee;
+    border-color: #55acee;
+    box-shadow: 0 2px 2px 0 rgba(85,172,238,.14), 0 3px 1px -2px rgba(85,172,238,.2), 0 1px 5px 0 rgba(85,172,238,.12);
+}
+
+.btn.btn-twitter.btn-link{
+    background-color: transparent;
+    color: #55acee;
+    box-shadow: none;
+}
+
+.btn.btn-twitter.btn-link:hover:active{
+    background-color: transparent;
+    color: #55acee;
+    box-shadow: none;
+}
+
+.btn.btn-twitter.btn-link:hover{
+    box-shadow: none;
+    background-color: transparent;
+    color: #55acee;
+}
+
+.btn.btn-twitter:hover{
+    background-color: #55acee;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(85,172,238,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(85,172,238,.2);
+}
+
+.btn.btn-twitter:hover:active{
+    background-color: #55acee;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(85,172,238,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(85,172,238,.2);
+}
+
+.btn.btn-twitter:active{
+    background-color: #55acee;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(85,172,238,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(85,172,238,.2);
+}
+
+.btn.btn-twitter:focus{
+    background-color: #55acee;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(85,172,238,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(85,172,238,.2);
+}
+
+.btn.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    box-shadow: 0 2px 2px 0 rgba(59,89,152,.14), 0 3px 1px -2px rgba(59,89,152,.2), 0 1px 5px 0 rgba(59,89,152,.12);
+}
+
+.btn.btn-facebook:hover {
+    background-color: #3b5998;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(59,89,152,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(59,89,152,.2);
+}
+
+.btn.btn-facebook:hover:active {
+    background-color: #3b5998;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(59,89,152,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(59,89,152,.2);
+}
+
+.btn.btn-facebook:active {
+    background-color: #3b5998;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(59,89,152,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(59,89,152,.2);
+}
+
+.btn.btn-facebook:focus {
+    background-color: #3b5998;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(59,89,152,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(59,89,152,.2);
+}
+
+.btn.btn-dribbble.btn-link{
+    background-color: transparent;
+    color: #ea4c89;
+}
+
+.btn.btn-dribbble.btn-link:hover:active{
+    background-color: transparent;
+    color: #ea4c89;
+}
+
+.btn.btn-instagram.btn-link{
+    background-color: transparent;
+    color: #125688;
+}
+.btn.btn-instagram.btn-link:hover:active{
+    background-color: transparent;
+    color: #125688;
+}
+
+.btn.btn-google {
+    color: #fff;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+    box-shadow: 0 2px 2px 0 rgba(221,75,57,.14), 0 3px 1px -2px rgba(221,75,57,.2), 0 1px 5px 0 rgba(221,75,57,.12);
+}
+
+.btn.btn-google:hover{
+    color: #fff;
+    background-color: #dd4b39;
+    box-shadow: 0 14px 26px -12px rgba(221,75,57,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(221,75,57,.2);
+}
+
+.btn.btn-google:active{
+    color: #fff;
+    background-color: #dd4b39;
+    box-shadow: 0 14px 26px -12px rgba(221,75,57,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(221,75,57,.2);
+}
+
+.btn.btn-google:hover:active{
+    color: #fff;
+    background-color: #dd4b39;
+    box-shadow: 0 14px 26px -12px rgba(221,75,57,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(221,75,57,.2);
+}
+
+.btn.btn-google:focus{
+    color: #fff;
+    background-color: #dd4b39;
+    box-shadow: 0 14px 26px -12px rgba(221,75,57,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(221,75,57,.2);
+}
+
+.btn.btn-info {
+    color: #fff !important;
+    background-color: #00bcd4 !important;
+    border-color: #00bcd4 !important;
+    box-shadow: 0 2px 2px 0 rgba(0,188,212,.14), 0 3px 1px -2px rgba(0,188,212,.2), 0 1px 5px 0 rgba(0,188,212,.12);
+}
+
+.btn.btn-round {
+    border-radius: 30px;
+}
+
+footer{
+    margin-top:100px;
+    color: #555;
+    background: #fff;
+    padding: 25px;
+    font-weight: 300;
+    
+}
+.footer p{
+    margin-bottom: 0;
+}
+footer p a{
+    color: #555;
+    font-weight: 400;
+}
+
+footer p a:hover{
+    color: #9f26aa;
+    text-decoration: none;
+}
+
+
+               
+               
+               
+               </style>
+    </div>
+          </div>
+          <!-- Container (teams Section) -->
+          <div id="teams" class="bg-1">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-lg-12">
+                              <h3 class="text-center">The Teams</h3>
+                              <p class="text-center">meet the teams... <br>
+                                   <br>
+                              </p>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/blue-bats.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Blue Bats</h6>
+                                   <p class="clrd-font team-tag-line">Making Businesses Strive.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="blue-bats">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/brown-monkeys.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Brown Monkeys</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="brown-monkeys">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/turquoise-turtle.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Turquoise Turtles</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="turquoise-turtle">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/purple-beetles.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center"  >
+                                   <h6 class="clrd-font">Purple Beetles</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn btn-primary team-info-bnt" data-team="purple-beetles">Learn more</a>
+                              </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/rwc-logo.fw.png" alt="" />
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 single_portfolio_text">
+                              <img src="assets/images/team-logos/yellow-lama.jpg" alt="" />
+                              <div class="portfolio_images_overlay text-center">
+                                   <h6 class="clrd-font">Yellow Lamas</h6>
+                                   <p class="clrd-font team-tag-line">Team slogan/tag-line goes here.</p>
+                                   <a href="#" class="btn team-info-bnt" data-team="yellow-lama">Learn more</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div id="teamModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4> Title </h4>
+                              <h6></h6>
+                         </div>
+                         <div class="modal-body text-center" style="overflow: auto;">
+                              <div class="container-fluid">
+                                   <div class="row card-row blue-bats">
+                                        <div class="col-lg-3">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Keith.jpg" width="150" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Keith (Analee) Weichert</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Rebecca.jpg" width="150" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Rebecca Davis</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Sean.jpg" width="150" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Sean Bachman</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/david.gif" width="150" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">David Rohweder</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row blue-bats">
+                                        <div class="col-lg-12 text-center" style="padding-top: 20px;">
+                                             <a href="http://blue-bat.raccwebchallenge.com/" target="_blank"> <i class="fas fa-external-link-square-alt"></i> Visit Their Site </a>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row brown-monkeys">
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Adrianna-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Adrianna</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Luis-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Luis</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem; brown-monkeys">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Ethan-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Ethan</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row brown-monkeys">
+                                        <div class="col-lg-12 text-center" style="padding-top: 20px;">
+                                             <a href="http://brown-monkey.raccwebchallenge.com/" target="_blank"> <i class="fas fa-external-link-square-alt"></i> Visit Their Site </a>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row turquoise-turtle">
+                                        <div class="col-lg-2">
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Hector-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Hector</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Richie-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Richie</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                        </div>
+                                   </div>
+                                   <div class="row card-row turquoise-turtle">
+                                        <div class="col-lg-12 text-center" style="padding-top: 20px;">
+                                             <a href="http://turquois-turtle.raccwebchallenge.com/" target="_blank"> <i class="fas fa-external-link-square-alt"></i> Visit Their Site </a>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row purple-beetles">
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Giovanni-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Giovanni</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Jordy-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Jordy</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Nik-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Nik</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row purple-beetles">
+                                        <div class="col-lg-12 text-center" style="padding-top: 20px;">
+                                             <a href="http://purple-beetle.raccwebchallenge.com/" target="_blank"> <i class="fas fa-external-link-square-alt"></i> Visit Their Site </a>
+                                        </div>
+                                   </div>
+                                   <div class="row card-row yellow-lama">
+                                        <div class="col-lg-2">
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Everett-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Everett Daniels-Wright</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                                  <img class="card-img-top img-circle" src="assets/images/headshots/Isarel-150-150.jpg" alt="Card image cap">
+                                                  <div class="card-body">
+                                                       <h5 class="card-title">Israel Fernandez</h5>
+                                                       <p class="card-text"></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                             <div class="card" style="width: 18rem;">
+                                             </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                        </div>
+                                   </div>
+                                   <div class="row card-row yellow-lama">
+                                        <div class="col-lg-12 text-center" style="padding-top: 20px;">
+                                             <a href="http://yellow-lama.raccwebchallenge.com/" target="_blank"> <i class="fas fa-external-link-square-alt"></i> Visit Their Site </a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- Lesrning schedule Modal -->
+          <div class="modal fade" id="scheduleModal" role="dialog">
+               <div class="modal-dialog" style="width:80%; max-width:800px;">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4></h4>
+                         </div>
+                         <div class="modal-body" style="overflow: auto;">
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                              <button type="submit" id="printLessonItemsBtn01" class="btn btn-danger btn-default pull-right"> <span class="glyphicon glyphicon-print"></span> Print </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- Container (The challenge Section) -->
+          <div id="gallery">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-lg-12">
+                              <h3 class="text-center">Gallery</h3>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="bd-example bd-example-tabs">
+                              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                   <li class="nav-item active show"> <a class="nav-link" id="pills-images-tab" data-toggle="pill" href="#pills-images" role="tab" aria-controls="pills-images" aria-selected="false">Images</a> </li>
+                                   <li class="nav-item"> <a class="nav-link active show" id="pills-videos-tab" data-toggle="pill" href="#pills-videos" role="tab" aria-controls="pills-videos" aria-selected="true">Meeting Videos</a> </li>
+                              </ul>
+                              <div class="tab-content" id="pills-tabContent">
+                                   <div class="tab-pane active" id="pills-images" role="tabpanel" aria-labelledby="pills-images-tab">
+                                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                             <!-- Indicators -->
+                                             <ol class="carousel-indicators">
+                                                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                                             </ol>
+                                             
+                                             <!-- Wrapper for slides -->
+                                             <div class="carousel-inner">
+                                                  <div class="item active">
+                                                       <div class="row">
+                                                            <div class="gallery">
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4884.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4889.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4894.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4896.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4907.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4909.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4915.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4916.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4927.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4937.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4941.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="item">
+                                                       <div class="row">
+                                                            <div class="gallery">
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4927.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4937.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                                 <figure> <img src="assets/images/classroom-visit/IMG_4941.jpg" alt="" />
+                                                                      <figcaption>Reading Muhlenberg Career & Technology Center<small>Onsite Visit</small></figcaption>
+                                                                 </figure>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+                                                                 <symbol id="close" viewBox="0 0 18 18">
+                                                                      <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
+			S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
+			l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
+			c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
+			s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z"/>
+                                                                 </symbol>
+                                                            </svg>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <!-- Left and right controls --> 
+                                             <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a>
+                                        </div>
+                                   </div>
+                                   <div class="tab-pane" id="pills-videos" role="tabpanel" aria-labelledby="pills-videos-tab">
+                                        <div class="vid-container">
+                                             <iframe id="vid_frame" src="https://youtube.com/embed/FejEsbe_BKE?autoplay=1&rel=0&showinfo=0&autohide=1" frameborder="0" width="560" height="315"></iframe>
+                                        </div>
+                                        <div class="vid-list-container">
+                                             <div class="vid-list">
+                                             </div>
+                                        </div>
+                                        <div class="arrows">
+                                             <div class="arrow-left">
+                                                  <i class="fa fa-chevron-left fa-lg"></i>
+                                             </div>
+                                             <div class="arrow-right">
+                                                  <i class="fa fa-chevron-right fa-lg"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div id="learnMore" class="bg-1">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-12">
+                              <h3 class="text-center">About Jump Start Incubator</h3>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-12">
+                              <p>Jump Start Incubator is a temporary home for start-up businesses in the Greater Reading Area. It provides them with the intellectual and leadership capital necessary for their success during their critical development
+                                   period, and helps businesses to become self-sufficient and reach their potential. Jump Start Incubator helps to launch and grow exciting, innovative firms that will become the cornerstones of a revitalized city. The
+                                   incubator serves entrepreneurs as they navigate the pre-incubation, incubation and graduation stages of business startup. On-site tenant clients are headquartered in business suites with access to a comprehensive
+                                   communications/IT package, conference facilities, and a receptionist.</p>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-lg-12 text-center">
+                              <img src="assets/images/logos/jump-start-incubator-logo.png" class="img-responsive bg-info img-rounded" style="padding: 10px; margin: auto auto; max-width: 250px;" alt="">
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div id="schedule" class="container text-center">
+               <h3>Schedule</h3>
+               <!-- <p> <em>Let's learn together!</em> </p> -->
+               <p>Content to explaine schedule</p>
+               <br>
+               <div class="scroller scroller-left">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+               </div>
+               <div class="scroller scroller-right">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+               </div>
+               <div class="wrapper">
+                    <ul class="nav nav-tabs responsive list" id="sessionTabs">
+                    </ul>
+               </div>
+               <div class="tab-content responsive schedule-tabs">
+                    <i class="fas fa-cog fa-spin"></i> Loading Session Dates...
+               </div>
+               <button class="btn" data-toggle="modal" data-target="#scheduleModal">View List</button>
+               <button type="submit" id="printLessonItemsBtn02" class="btn"> <span class="glyphicon glyphicon-print"></span> Print </button>
+          </div>
+          <!-- day schedule Modal -->
+          <div class="modal fade" id="dayScheduleModal" role="dialog">
+               <div class="modal-dialog" style="width:80%; max-width:800px;">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4>October 5th 2018 Schedule</h4>
+                         </div>
+                         <div class="modal-body" style="overflow: auto;">
+                              <div class="col-md-12">
+                                   <div class="schedule-warp">
+                                        <div class="day-one">
+                                             DAY 1 | Welcome to the Challenge
+                                        </div>
+                                        <div id="sc-2137" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">9:00 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Introductions</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Meet Brian Savage, Lisa Parson </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-1838" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">9:30 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Discuss the RACC Web Challenge</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Rules, Judging, Expectations </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2140" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">10:00 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Discuss Technology</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Access to Servers, Resources, Communication Resources </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2142" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">10:30 AM<br />
+                                                  RM: P126</span> <span class="schedule-start"> <strong>Prepare To Meet The Client</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Preview the clients site and discuss points to explore with the client. </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2144" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">11:00 AM<br />
+                                                  RM: ????</span> <span class="schedule-start"> <strong>Break For Lunch</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Lunch will be provided. </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2146" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">12:30 PM<br />
+                                                  RM: 126</span> <span class="schedule-start"> <strong>Meet The Client</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Meet June Clougher, Director of Jump Start Incubator<br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- and Jason Brudereck, Director of Communication of Jump Start Incubator. </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2149" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">1:30 PM<br />
+                                                  RM: ????</span> <span class="schedule-start"> <strong>Team Pictures</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- take team photos </span>
+                                             </div>
+                                        </div>
+                                        <div id="sc-2151" class="schedule-card">
+                                             <div class="insidebox">
+                                                  <span class="schedule-tag">2:00 PM<br />
+                                                  RM: ????</span> <span class="schedule-start"> <strong>Departure</strong> <br />
+                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Board buses to return to home schools. </span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                              <button type="submit" id="printDayScheduleModalBtn" class="btn btn-danger btn-default pull-right"> <span class="glyphicon glyphicon-print"></span> Print </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          
+          <!-- Container (Contact Section) -->
+          
+          <div id="contact" class="bg-1">
+               <div class="container">
+                    <h3 class="text-center">Contact</h3>
+                    <p class="text-center"> <em>Let us know how we can help you!</em> </p>
+                    <div class="row">
+                         <div class="col-md-12 text-center">
+                              <p>Please contact us.</p>
+                              <p> <span class="glyphicon glyphicon-map-marker"></span> <a href="https://www.google.com/maps/place/Reading+Area+Community+College/@40.3344955,-75.9382694,17z/data=!4m13!1m7!3m6!1s0x89c670d26ae0e9c5:0x9c1eb479056ec940!2s10+S+2nd+St,+Reading,+PA+19602!3b1!8m2!3d40.3344955!4d-75.9360807!3m4!1s0x89c670d1f1f076fd:0x2c4bd1b030ade9a0!8m2!3d40.334699!4d-75.934596"
+                              class="gmap">10 South Second Street, Reading, PA 19602 </a></p>
+                              <p> <span class="glyphicon glyphicon-phone"></span> Phone: 610-607-6219 </p>
+                              <p> <span class="glyphicon glyphicon-envelope"></span> Email: jcorbett@racc.edu </p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- Footer -->
+          <footer class="text-center">
+               <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP"> <span class="glyphicon glyphicon-chevron-up"></span> </a> <br>
+               <br>
+          </footer>
+          <div id="lgModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4> Title </h4>
+                         </div>
+                         <div class="modal-body" style="overflow: auto;">
+                         </div>
+                         <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div id="mapModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                         <div class="modal-header modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4> Title </h4>
+                         </div>
+                         <div class="modal-body modal-body" style="overflow: auto;">
+                         </div>
+                         <div class="modal-footer modal-footer">
+                              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-close"></span> Close </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+          <script src="assets/js/responsive-tabs.js"></script> 
+          <script src="assets/js/app.js"></script> 
+          <!-- Global site tag (gtag.js) - Google Analytics --> 
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123539134-1"></script>
+     </body>
+</html>
