@@ -398,9 +398,26 @@ $(window).ready(function cardInfoUpdate() {
                }
           });
      });
+     
+     
+     shwoWinners('.blue-bats');
+     
+     
 });
 
 window.dataLayer = window.dataLayer || [];
+
+
+function shwoWinners(wins){
+          $('#winnersModal').css('width', '90%');
+          $('#winnersModal .modal-dialog').css('max-width', '');
+          $('#winnersModal').css('margin-left', '6%');
+          $('#winnersModal .modal-header').html('<h1>Congradulations 2018 RACC Web Challenge Winners</h1><h2>Blue Bats</h2>');
+          $('#winnersModal').css('margin-top', '60px');
+          $( wins ).clone().appendTo( "#winnersModal .modal-body" );
+          $('#winnersModal').modal('show');
+}
+
 
 function gtag() {
      dataLayer.push(arguments);

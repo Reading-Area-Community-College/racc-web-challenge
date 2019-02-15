@@ -35,3 +35,6 @@ _notes/
 /.htacl
 /.vscode/ftp-kr.json
 /.vscode/ftp-kr.sync.cache.json
+
+/images
+/comp_image_gal
